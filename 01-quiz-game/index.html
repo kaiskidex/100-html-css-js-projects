@@ -4,13 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Chango&family=Content:wght@400;700&family=Cute+Font&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Varela+Round&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    sdasd
+    <div class="container">
+      <div class="screen active" id="start-screen">
+        <h1>Friend Quiz!</h1>
+        <p>How well do you know me pookie</p>
+        <button id="start-btn">Start</button>
+      </div>
+
+      <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+          <h2 id="question-text">Question goes here</h2>
+          <div class="quiz-info">
+            <p>
+              Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+            </p>
+
+            <p>Score: <span id="score">0</span></p>
+          </div>
+        </div>
+
+        <div id="answers-container" class="answers-container">
+          <!--Answer buttons will be inserted here from our js code later at some point-->
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+      </div>
+
+      <div id="result-screen" class="screen">
+        <h1>Quiz Results</h1>
+        <div class="result-info">
+          <p>
+            You scored <span id="final-score">0</span> out of
+            <span id="max-score">5</span>
+          </p>
+          <div id="result-message">Good job lil bro</div>
+        </div>
+        <button id="restart-btn">Restart Quiz</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
